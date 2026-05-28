@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #EAEDED;
+}
+
+/* Header */
+.navbar {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF9900;
+}
+
+.logo span {
+    color: white;
+    font-size: 18px;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #FEBD69;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #FF9900;
+    text-decoration: underline;
+}
+
+/* User Account Dropdown */
+.account-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.account-menu > a {
+    color: white;
+    text-decoration: none;
+}
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 100;
+    margin-top: 8px;
+    padding: 10px 0;
+}
+
+.account-menu:hover .account-dropdown {
+    display: block;
+}
+
+.account-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 20px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+}
+
+.account-dropdown-header {
+    padding: 8px 15px;
+    border-bottom: 1px solid #e7e7e7;
+    background: #f7f7f7;
+}
+
+.account-dropdown-header b {
+    font-size: 13px;
+    color: #0F1111;
+    display: block;
+}
+
+.account-dropdown-header span {
+    font-size: 11px;
+    color: #565959;
+}
+
+.account-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #0F1111 !important;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.account-dropdown a:hover {
+    background: #f0f2f2;
+    color: #C7511F !important;
+    text-decoration: none;
+}
+
+.signout-link {
+    border-top: 1px solid #e7e7e7;
+    margin-top: 5px;
+    padding-top: 8px;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to bottom, #4A90E2, #EAEDED);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Product Grid */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.section-title {
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.price {
+    color: #B12704;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Product Card - JS ke liye */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    min-height: 40px;
+    color: #0F1111;
+    overflow: hidden;
+}
+
+.product-card .price {
+    font-size: 20px;
+    color: #B12704;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-card .category {
+    font-size: 12px;
+    color: #565959;
+    margin-bottom: 10px;
+}
+
+.add-btn {
+    width: 100%;
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    background: #F7CA00;
+}
+
+/* Product Detail Modal */
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-body {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.modal-body img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.modal-details h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.modal-price {
+    font-size: 28px;
+    color: #B12704;
+    margin: 10px 0;
+}
+
+.modal-category {
+    color: #565959;
+    margin: 8px 0;
+}
+
+.modal-stock {
+    color: #067D62;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.modal-delivery {
+    margin: 8px 0 20px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #232F3E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+    .nav-links {
+        display: none;
+    }
+    .account-dropdown {
+        right: -50px;
+    }
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .modal-body {
+        flex-direction: column;
+    }
+    .modal-body img {
+        width: 100%;
+        height: auto;
+    }
+}

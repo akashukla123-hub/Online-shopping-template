@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopLittle</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="shoplittle.html">Shop<span>Little</span></a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search ShopLittle.in">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <div class="nav-links">
+            <div class="account-menu" id="userAccount"><a href="signin.html">Hello, Sign in</a></div>
+            <div><a href="orders.html">Returns & Orders</a></div>
+            <div><a href="cart.html">Cart 🛒 (0)</a></div>
+        </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="container">
+        <!-- Left Side - Cart Items -->
+        <div class="cart-left">
+            <div class="cart-box">
+                <h1 class="cart-title">Shopping Cart</h1>
+                <div id="cartItemsList">
+                    <!-- JS se load hoga -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Checkout -->
+        <div class="cart-right">
+            <div class="checkout-box">
+                <div class="subtotal-price">
+                    Subtotal (0 items): <b>₹0</b>
+                </div>
+                <button class="checkout-btn" onclick="proceedToBuy()">Proceed to Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 ShopLittle - For Educational Purpose Only</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

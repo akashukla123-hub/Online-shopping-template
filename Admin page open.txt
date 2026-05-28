@@ -1,0 +1,1 @@
+localStorage.setItem('shoplittle_logged_in', 'Admin')

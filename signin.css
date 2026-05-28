@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Header */
+.navbar {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF9900;
+}
+
+.logo span {
+    color: white;
+    font-size: 18px;
+}
+
+/* Sign In Container */
+.signin-container {
+    max-width: 350px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.signin-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 26px;
+}
+
+.signin-box h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 1px 0 rgba(0, 0, 0, .07) inset;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228, 121, 17, .5);
+}
+
+.signin-btn {
+    width: 100%;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border: 1px solid #a88734;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.signin-btn:hover {
+    background: linear-gradient(to bottom, #f5d78e, #eeb933);
+}
+
+.help-text {
+    font-size: 12px;
+    margin-top: 18px;
+    line-height: 1.5;
+}
+
+.help-text a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 25px 0 15px 0;
+    color: #767676;
+    font-size: 12px;
+}
+
+.divider::after {
+    content: "";
+    width: 100%;
+    background-color: #e7e7e7;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+}
+
+.divider span {
+    background: #fff;
+    padding: 0 8px;
+}
+
+.create-account-btn {
+    width: 100%;
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    border: 1px solid #adb1b8;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.create-account-btn:hover {
+    background: linear-gradient(to bottom, #e7eaf0, #d9dce1);
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: #555;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #0066c0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}

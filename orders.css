@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #EAEDED;
+}
+
+/* Header */
+.navbar {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+.logo span {
+    color: white;
+    font-size: 18px;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #FEBD69;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #FF9900;
+    text-decoration: underline;
+}
+
+/* Account Dropdown - FIX */
+.account-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.13);
+    min-width: 220px;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.account-menu:hover .account-dropdown {
+    display: block;
+}
+
+.account-dropdown-header {
+    padding: 8px 15px;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 13px;
+}
+
+.account-dropdown-header b {
+    color: #111;
+    font-size: 14px;
+}
+
+.account-dropdown-header span {
+    color: #565959;
+    font-size: 12px;
+}
+
+.account-dropdown a {
+    display: block;
+    padding: 8px 15px;
+    color: #111 !important;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.account-dropdown a:hover {
+    background: #f0f2f2;
+    color: #c7511f !important;
+    text-decoration: none;
+}
+
+.account-dropdown .signout-link {
+    border-top: 1px solid #e7e7e7;
+    margin-top: 5px;
+    padding-top: 8px;
+}
+
+/* Main Container */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Order Card */
+.order-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.order-header {
+    background-color: #F0F2F2;
+    padding: 14px 18px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.order-header span {
+    color: #565959;
+}
+
+.order-header b {
+    color: #0F1111;
+}
+
+.order-body {
+    padding: 18px;
+    display: flex;
+    gap: 20px;
+}
+
+.order-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.order-details {
+    flex: 1;
+}
+
+.order-details h3 {
+    font-size: 16px;
+    color: #007185;
+    margin-bottom: 5px;
+}
+
+.order-details h3:hover {
+    color: #C7511F;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.delivery-status {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #007600;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+}
+
+.btn {
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: 1px solid #D5D9D9;
+    background: white;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #FFD814;
+    border-color: #FCD200;
+}
+
+.btn-primary:hover {
+    background: #F7CA00;
+}
+
+.btn:hover {
+    background: #F7FAFA;
+}
+
+/* Footer */
+.footer {
+    background-color: #232F3E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .order-body {
+        flex-direction: column;
+    }
+    .order-actions {
+        width: 100%;
+    }
+    .account-dropdown {
+        right: -50px;
+    }
+}

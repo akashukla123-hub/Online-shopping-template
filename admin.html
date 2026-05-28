@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - ShopLittle</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="shoplittle.html">Shop<span>Little</span></a> Admin
+        </div>
+        <div class="nav-links">
+            <div class="account-menu" id="userAccount"><a href="signin.html">Hello, Sign in</a></div>
+            <div><a href="shoplittle.html">Back to Store</a></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="page-title">Admin Dashboard</h1>
+
+        <!-- Stats Cards - FIXED ID -->
+        <div class="stats" id="statsContainer">
+            <!-- JS se load hoga -->
+        </div>
+
+        <!-- Add Product Section - UPDATED with Stock -->
+        <div class="admin-section">
+
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <div class="form-row">
+                    <input type="text" id="productName" placeholder="Product Name" required>
+                    <input type="number" id="productPrice" placeholder="Price ₹" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="productImg" placeholder="Image URL" required>
+                    <select id="productCategory" required>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Home">Home</option>
+                        <option value="Books">Books</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="number" id="productStock" placeholder="Stock Quantity" value="10" required>
+                    <select id="productDelivery" required>
+                        <option value="Available">Delivery Available</option>
+                        <option value="Out of Stock">Out of Stock</option>
+                        <option value="Coming Soon">Coming Soon</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Products List -->
+        <div class="admin-section">
+            <h2>All Products</h2>
+            <div id="productsList"></div>
+        </div>
+
+        <!-- Orders List -->
+        <div class="admin-section">
+            <h2>Recent Orders</h2>
+            <div id="ordersList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

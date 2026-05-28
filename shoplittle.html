@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopLittle - Online Shopping</title>
+    <link rel="stylesheet" href="shpolittle.css"> 
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="navbar">
+        <div class="logo">Shop<span>Little</span></div>
+        <div class="search-box">
+            <input type="text" placeholder="Search ShopLittle.in">
+            <button>Search</button>
+        </div>
+        <div class="nav-links">
+            <div class="account-menu" id="userAccount"><a href="signin.html">Hello, Sign in</a></div>
+            <div><a href="orders.html">Returns & Orders</a></div>
+            <div><a href="cart.html">Cart 🛒 (0)</a></div>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        ShopLittle Mega Sale - Up to 70% Off
+    </div>
+
+    <!-- Products -->
+    <div class="container">
+        <h2 class="section-title">Today's Deals on ShopLittle</h2>
+        <div class="products" id="productsContainer">
+            <!-- Products JS se load honge - default + admin dono -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 ShopLittle - For Educational Purpose Only</p>
+    </div>
+
+    <!-- Product Detail Popup -->
+    <div id="productModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Product">
+                <div class="modal-details">
+                    <h2 id="modalName"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-category" id="modalCategory"></p>
+                    <p class="modal-stock" id="modalStock"></p>
+                    <p class="modal-delivery" id="modalDelivery"></p>
+                    <button id="modalAddBtn" class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
