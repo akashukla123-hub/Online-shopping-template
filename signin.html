@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopLittle Sign In</title>
+    <title>index Sign In</title>
     <link rel="stylesheet" href="signin.css">
 </head>
 
@@ -12,7 +12,7 @@
 
     <!-- Header -->
     <div class="navbar">
-        <div class="logo"><a href="shoplittle.html">Shop<span>Little</span></a></div>
+        <div class="logo"><a href="index.html">Shop<span>Little</span></a></div>
     </div>
 
     <!-- Sign In Form -->
@@ -33,7 +33,7 @@
                 <button type="submit" class="signin-btn">Sign in</button>
 
                 <div class="help-text">
-                    By continuing, you agree to ShopLittle's
+                    By continuing, you agree to index's
                     <a href="#">Conditions of Use</a> and
                     <a href="#">Privacy Notice</a>.
                 </div>
@@ -45,10 +45,10 @@
         </div>
 
         <div class="divider">
-            <span>New to ShopLittle?</span>
+            <span>New to index?</span>
         </div>
 
-        <a href="signup.html"><button class="create-account-btn">Create your ShopLittle account</button></a>
+        <a href="signup.html"><button class="create-account-btn">Create your index account</button></a>
     </div>
 
     <!-- Footer -->
@@ -58,7 +58,7 @@
             <a href="#">Privacy Notice</a>
             <a href="#">Help</a>
         </div>
-        <p>&copy; 2026 ShopLittle - For Educational Purpose Only</p>
+        <p>&copy; 2026 index - For Educational Purpose Only</p>
     </div>
 
     <script>
@@ -70,13 +70,13 @@
             const password = document.getElementById('password').value;
             
             // Get users from localStorage
-            const users = JSON.parse(localStorage.getItem('shoplittle_users')) || [];
+            const users = JSON.parse(localStorage.getItem('index_users')) || [];
             const user = users.find(u => u.mobile === email && u.password === password);
             
             if (user) {
                 alert('Welcome back, ' + user.name + '!');
-                localStorage.setItem('shoplittle_logged_in', user.name);
-                window.location.href = 'shoplittle.html';
+                localStorage.setItem('index_logged_in', user.name);
+                window.location.href = 'index.html';
             } else {
                 alert('Incorrect email or password. Please try again or create an account.');
             }
